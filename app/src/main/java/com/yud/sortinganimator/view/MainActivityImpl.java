@@ -3,7 +3,6 @@ package com.yud.sortinganimator.view;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.StringRes;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -17,6 +16,7 @@ import android.widget.TextView;
 
 import com.yud.sortinganimator.R;
 import com.yud.sortinganimator.common.Action;
+import com.yud.sortinganimator.common.SortAlgorithms;
 import com.yud.sortinganimator.presenter.MainActivityPresenter;
 import com.yud.sortinganimator.presenter.MainActivityPresenterImpl;
 
@@ -57,9 +57,9 @@ public class MainActivityImpl extends BaseActivity<MainActivityPresenter> implem
 	private void initSpinner() {
 		List<SortAlgorithm> algorithms = new ArrayList<>();
 
-		algorithms.add(new SortAlgorithm(R.string.bubble_sort, () -> this.presenter.onAlgorithmSelected(MainActivityPresenterImpl.SortAlgorithms.BUBBLE)));
-		algorithms.add(new SortAlgorithm(R.string.selection_sort, () -> this.presenter.onAlgorithmSelected(MainActivityPresenterImpl.SortAlgorithms.SELECTION)));
-		algorithms.add(new SortAlgorithm(R.string.quick_sort, () -> this.presenter.onAlgorithmSelected(MainActivityPresenterImpl.SortAlgorithms.QUICK)));
+		algorithms.add(new SortAlgorithm(R.string.bubble_sort, () -> this.presenter.onAlgorithmSelected(SortAlgorithms.BUBBLE)));
+		algorithms.add(new SortAlgorithm(R.string.selection_sort, () -> this.presenter.onAlgorithmSelected(SortAlgorithms.SELECTION)));
+		algorithms.add(new SortAlgorithm(R.string.quick_sort, () -> this.presenter.onAlgorithmSelected(SortAlgorithms.QUICK)));
 
 		this.spnSortAlgorithm.setAdapter(new SortSpinnerAdapter(this, algorithms));
 

@@ -1,5 +1,6 @@
 package com.yud.sortinganimator.presenter;
 
+import com.yud.sortinganimator.common.SortAlgorithms;
 import com.yud.sortinganimator.view.MainActivity;
 
 /**
@@ -10,5 +11,5 @@ public interface MainActivityPresenter extends Presenter<MainActivity> {
 
 	void onGenerateClick();
 
-	void onAlgorithmSelected(MainActivityPresenterImpl.SortAlgorithms bubble);
+	void onAlgorithmSelected(SortAlgorithms bubble);
 }

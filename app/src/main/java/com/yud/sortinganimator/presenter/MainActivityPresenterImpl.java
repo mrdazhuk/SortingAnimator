@@ -3,6 +3,7 @@ package com.yud.sortinganimator.presenter;
 import android.content.Context;
 import android.support.annotation.NonNull;
 
+import com.yud.sortinganimator.common.SortAlgorithms;
 import com.yud.sortinganimator.model.sort.BubbleSort;
 import com.yud.sortinganimator.model.sort.QuickSort;
 import com.yud.sortinganimator.model.sort.SelectionSort;
@@ -113,10 +114,6 @@ public class MainActivityPresenterImpl extends BasePresenter<MainActivity> imple
 		if (this.sortingSubscription != null && !this.sortingSubscription.isUnsubscribed()) {
 			this.sortingSubscription.unsubscribe();
 		}
-	}
-
-	public enum SortAlgorithms {
-		BUBBLE, SELECTION, QUICK
 	}
 
 	private class Swap {
