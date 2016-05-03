@@ -1,0 +1,17 @@
+.gradle
+local.properties
+.idea/**
+
+.DS_Store
+build
+captures
+libraries/*.iml
+
+bin
+gen
+build
+.classpath
+.settings/*
+local.properties
+.project
+project.properties

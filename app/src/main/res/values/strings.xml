@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SortingAnimator</string>
+    <string name="action_settings">Settings</string>
+    <string name="done">Done</string>
+
+    <!-- Algorithms-->
+    <string name="bubble_sort">Bubble</string>
+    <string name="selection_sort">Selection</string>
+    <string name="quick_sort">Quick sort</string>
+</resources>
